@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="FTf-9q-iSs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="896"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AzA-ku-A61">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oZ-cX-lkm">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="271.66666666666669"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-1R-Qmh">
+                                                <rect key="frame" x="97.666666666666671" y="116.66666666666664" width="179.66666666666663" height="38.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <color key="textColor" red="0.92209748045000262" green="1" blue="0.95296952659835577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hfl-1R-Qmh" firstAttribute="centerX" secondItem="8oZ-cX-lkm" secondAttribute="centerX" id="8fQ-vV-rSE"/>
+                                            <constraint firstItem="hfl-1R-Qmh" firstAttribute="centerY" secondItem="8oZ-cX-lkm" secondAttribute="centerY" id="GdV-6P-WWK"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6a0-J9-ATI">
+                                        <rect key="frame" x="0.0" y="271.66666666666663" width="375" height="278.66666666666663"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter city name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zxM-ii-aNV">
+                                                <rect key="frame" x="0.0" y="15" width="375" height="34"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxU-GO-JyA">
+                                                <rect key="frame" x="100" y="121" width="175" height="36"/>
+                                                <color key="backgroundColor" red="0.74926523011100299" green="1" blue="0.86722828291437148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Search"/>
+                                                <connections>
+                                                    <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dic-6d-CaU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="LxU-GO-JyA" secondAttribute="bottom" constant="121.67" id="1GW-Jg-fBu"/>
+                                            <constraint firstAttribute="trailing" secondItem="LxU-GO-JyA" secondAttribute="trailing" constant="100" id="2JI-M1-962"/>
+                                            <constraint firstItem="zxM-ii-aNV" firstAttribute="top" secondItem="6a0-J9-ATI" secondAttribute="top" constant="15" id="5NN-oc-aP4"/>
+                                            <constraint firstItem="LxU-GO-JyA" firstAttribute="top" secondItem="zxM-ii-aNV" secondAttribute="bottom" constant="72" id="OTD-qY-4Ea"/>
+                                            <constraint firstItem="zxM-ii-aNV" firstAttribute="leading" secondItem="6a0-J9-ATI" secondAttribute="leading" id="YlA-ez-3Yu"/>
+                                            <constraint firstAttribute="trailing" secondItem="zxM-ii-aNV" secondAttribute="trailing" id="l6Z-Xr-bHb"/>
+                                            <constraint firstItem="LxU-GO-JyA" firstAttribute="leading" secondItem="6a0-J9-ATI" secondAttribute="leading" constant="100" id="xJ7-xJ-lmL"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koD-av-tNM">
+                                        <rect key="frame" x="0.0" y="550.33333333333337" width="375" height="183.66666666666663"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ki-BY-Sy0">
+                                                <rect key="frame" x="0.0" y="8" width="375" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0Ki-BY-Sy0" firstAttribute="top" secondItem="koD-av-tNM" secondAttribute="top" constant="8" id="lji-O1-a17"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Ki-BY-Sy0" secondAttribute="bottom" constant="151.66999999999999" id="wrc-FR-wFO"/>
+                                            <constraint firstItem="0Ki-BY-Sy0" firstAttribute="leading" secondItem="koD-av-tNM" secondAttribute="leading" id="xtN-SD-6ir"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Ki-BY-Sy0" secondAttribute="trailing" id="zRc-D1-oBF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AzA-ku-A61" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="2VB-bs-mai"/>
+                            <constraint firstItem="FTf-9q-iSs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9NH-6O-5BC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AzA-ku-A61" secondAttribute="trailing" id="M3I-Mh-rFH"/>
+                            <constraint firstAttribute="trailing" secondItem="FTf-9q-iSs" secondAttribute="trailing" id="OXL-Kh-5tq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AzA-ku-A61" secondAttribute="bottom" id="UPS-sY-jiG"/>
+                            <constraint firstItem="FTf-9q-iSs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YKn-2o-vj1"/>
+                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="FTf-9q-iSs" secondAttribute="bottom" constant="34" id="ffl-R5-r96"/>
+                            <constraint firstItem="AzA-ku-A61" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="frq-NE-f1D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="zxM-ii-aNV" id="RiG-t7-mwf"/>
+                        <outlet property="weatherLabel" destination="0Ki-BY-Sy0" id="bbV-oA-vTy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="414" height="896"/>
+    </resources>
+</document>
